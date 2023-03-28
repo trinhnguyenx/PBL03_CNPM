@@ -34,7 +34,7 @@ namespace PBL3_1._0_
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            //sạiaisjaisjaisji
         }
 
         private void button7_Click(object sender, EventArgs e)
