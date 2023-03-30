@@ -48,7 +48,7 @@ namespace PBL3_1._0_
             }
             else
             {
-                string query = "Select * from ACCOUNT where TaiKhoan = '" + tentaikhoan + "' and MatKhau ='" + matkhau + "'";
+                string query = "Select * from ACCOUNTT where TaiKhoan = '" + tentaikhoan + "' and MatKhau ='" + matkhau + "'";
                 if (modify.TaiKhoans(query).Count != 0)
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

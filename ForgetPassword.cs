@@ -28,7 +28,7 @@ namespace PBL3_1._0_
             }
             else
             {
-                string query = " Select * from ACCOUNT where Email = '" + email + "'";
+                string query = " Select * from ACCOUNTT where Email = '" + email + "'";
                 if(modify.TaiKhoans(query).Count !=0)
                 {
                     label2.ForeColor = Color.Blue;

@@ -20,7 +20,7 @@ namespace PBL3_1._0_
             InitializeComponent();
         }
  
-        public bool CheckAccount(string ac) // check tk mk
+        public bool CheckACCOUNTT(string ac) // check tk mk
         { 
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
         }
@@ -41,19 +41,19 @@ namespace PBL3_1._0_
                 string xacnhanmk = txtMKresC.Text;
                 string gmail = txtGmail.Text;
 
-                if (!CheckAccount(tkres))
+                if (!CheckACCOUNTT(tkres))
                 {
                     MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 kí tự, với các chữ số, chữ hoa và chữ thường");
                     return;
                 }
 
-                if (!CheckAccount(mkres))
+                if (!CheckACCOUNTT(mkres))
                 {
                     MessageBox.Show("Vui lòng nhập mật khẩu dài 6-24 kí tự, với các chữ số, chữ hoa và chữ thường");
                     return;
                 }
 
-                if (!CheckAccount(xacnhanmk))
+                if (!CheckACCOUNTT(xacnhanmk))
                 {
                     MessageBox.Show("Vui lòng nhập mật khẩu xác nhận dài 6-24 kí tự, với các chữ số, chữ hoa và chữ thường");
                     return;
@@ -65,7 +65,7 @@ namespace PBL3_1._0_
                     return;
                 }
 
-                if (modify.TaiKhoans("Select * from ACCOUNT where Email = '" + gmail + "'").Count != 0)
+                if (modify.TaiKhoans("Select * from ACCOUNTT where Email = '" + gmail + "'").Count != 0)
                 {
                     MessageBox.Show("Email này đã được đăng kí,vui lòng đăng kí Email khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -79,7 +79,7 @@ namespace PBL3_1._0_
 
             try
             {
-                string query = "INSERT INTO ACCOUNT VALUES ('" + tkres + "','" + mkres + "','" + gmail + "','"+idposition+"')";
+                string query = "INSERT INTO ACCOUNTT VALUES ('" + tkres + "','" + mkres + "','" + gmail + "','"+idposition+"')";
                 modify.Command(query);
                 if(MessageBox.Show("Đăng kí thành công ! Bạn có muốn đăng nhập luôn không?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes) {
                     Login login = new Login();
