@@ -69,5 +69,55 @@ namespace PBL3_1._0_.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _671822c2f63dd5f65d8fd15c9710420b {
+            get {
+                object obj = ResourceManager.GetObject("671822c2f63dd5f65d8fd15c9710420b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _671822c2f63dd5f65d8fd15c9710420b1 {
+            get {
+                object obj = ResourceManager.GetObject("671822c2f63dd5f65d8fd15c9710420b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _671822c2f63dd5f65d8fd15c9710420b2 {
+            get {
+                object obj = ResourceManager.GetObject("671822c2f63dd5f65d8fd15c9710420b2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anh_nen_lau_dai_hogwarts_083824270 {
+            get {
+                object obj = ResourceManager.GetObject("anh-nen-lau-dai-hogwarts_083824270", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngkit_old_scroll_png_1079801 {
+            get {
+                object obj = ResourceManager.GetObject("pngkit_old-scroll-png_1079801", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

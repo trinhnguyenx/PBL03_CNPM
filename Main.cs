@@ -15,22 +15,7 @@ namespace PBL3_1._0_
         public Main()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        }      
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -44,15 +29,31 @@ namespace PBL3_1._0_
             if (res == DialogResult.Yes)
             {
                 Login login = new Login();
+                
                 login.Show();
                 this.Hide();
             }
             else
             {
                 this.Show();
-            }
-             
+            }            
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TTDocGia form = new TTDocGia();
+            form.Name = "Quan Li Thong Tin Ban Doc";
+            form.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TTSach form = new TTSach();
+            form.Name = "Quan Li Thong Tin Sach";
+            form.Show();
+            this.Hide();
         }
     }
 }

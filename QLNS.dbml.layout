@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.375" name="QLNS">
+  <DataContextMoniker Name="/QLNSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="08b25c3b-e6c3-4c53-b207-3c3d17c8c6d8" absoluteBounds="0.75, 4.625, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/QLNSDataContext/ACCOUNTT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37b69328-a8bd-44b1-bce8-09e2abd66095" absoluteBounds="0.765, 5.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3df341dc-0fbc-4423-9141-2c0529e16555" absoluteBounds="3.5, 3.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/QLNSDataContext/nhanvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fffcba20-8045-4a9e-8cd1-36bbd2b6ba85" absoluteBounds="3.515, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="baf44b93-1cc6-4fb7-8e79-d9182ed49b28" absoluteBounds="3.75, 0.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/QLNSDataContext/theloai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c20a69bb-cfc3-4f41-9a39-7ea6caaa5f15" absoluteBounds="3.765, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de18df59-4bb2-4cf5-8017-a30431d24ee8" absoluteBounds="3.75, 10.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/QLNSDataContext/nxb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19246824-d1bb-4704-870b-1078cda972f1" absoluteBounds="3.765, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a54ef6f2-1151-4f65-acf7-58ec099a8138" absoluteBounds="3.75, 8.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/QLNSDataContext/tacgia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e22e3d6-7f27-4375-b322-d6f0857276df" absoluteBounds="3.765, 9.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.85659912109375); (3.5 : 4.85659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLNSDataContext/ACCOUNTT/ACCOUNTT_nhanvien" />
+      <nodes>
+        <classShapeMoniker Id="08b25c3b-e6c3-4c53-b207-3c3d17c8c6d8" />
+        <classShapeMoniker Id="3df341dc-0fbc-4423-9141-2c0529e16555" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5f0ba3b3-f953-466a-ace0-72bd0e6ef6e7" absoluteBounds="3.25, 6.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLNSDataContext/docgia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="154f5bea-ad6c-4b77-813d-0b846c675de9" absoluteBounds="3.265, 6.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 6.39589680989583); (1.75 : 7.32774983723958); (3.25 : 7.32774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLNSDataContext/ACCOUNTT/ACCOUNTT_docgia" />
+      <nodes>
+        <classShapeMoniker Id="08b25c3b-e6c3-4c53-b207-3c3d17c8c6d8" />
+        <classShapeMoniker Id="5f0ba3b3-f953-466a-ace0-72bd0e6ef6e7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8d95fd0a-2dd7-4e6f-88d4-478199add621" absoluteBounds="6.5, 4.875, 2, 3.1170068359375">
+      <DataClassMoniker Name="/QLNSDataContext/sach" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1371fbcd-aae0-4c6a-99b4-7c23ad889a06" absoluteBounds="6.515, 5.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.66909912109375); (6.5 : 5.66909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLNSDataContext/ACCOUNTT/ACCOUNTT_sach" />
+      <nodes>
+        <classShapeMoniker Id="08b25c3b-e6c3-4c53-b207-3c3d17c8c6d8" />
+        <classShapeMoniker Id="8d95fd0a-2dd7-4e6f-88d4-478199add621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 11.4431469726562); (7.5 : 11.4431469726562); (7.5 : 7.9920068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLNSDataContext/nxb/nxb_sach" />
+      <nodes>
+        <classShapeMoniker Id="de18df59-4bb2-4cf5-8017-a30431d24ee8" />
+        <classShapeMoniker Id="8d95fd0a-2dd7-4e6f-88d4-478199add621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 8.875); (5.65625 : 5.95955206054687); (6.5 : 5.95955206054687)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLNSDataContext/tacgia/tacgia_sach" />
+      <nodes>
+        <classShapeMoniker Id="a54ef6f2-1151-4f65-acf7-58ec099a8138" />
+        <classShapeMoniker Id="8d95fd0a-2dd7-4e6f-88d4-478199add621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.703125 : 2.06899251302083); (5.703125 : 5.37864618164063); (6.5 : 5.37864618164063)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLNSDataContext/theloai/theloai_sach" />
+      <nodes>
+        <classShapeMoniker Id="baf44b93-1cc6-4fb7-8e79-d9182ed49b28" />
+        <classShapeMoniker Id="8d95fd0a-2dd7-4e6f-88d4-478199add621" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

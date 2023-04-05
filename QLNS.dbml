@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LogIn" Class="QLNSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-873V4A2C\SQLEXPRESS;Initial Catalog=LogIn;Integrated Security=True" SettingsObjectName="PBL3_1._0_.Properties.Settings" SettingsPropertyName="LogInConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ACCOUNTT" Member="ACCOUNTTs">
+    <Type Name="ACCOUNTT">
+      <Column Name="ID_Uers" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Taikhoan" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_POSITION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ACCOUNTT_nhanvien" Member="nhanviens" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="nhanvien" />
+      <Association Name="ACCOUNTT_docgia" Member="docgias" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="docgia" />
+      <Association Name="ACCOUNTT_sach" Member="saches" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhanvien" Member="nhanviens">
+    <Type Name="nhanvien">
+      <Column Name="manhanvien" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tennhanvien" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ID_Uers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ACCOUNTT_nhanvien" Member="ACCOUNTT" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="ACCOUNTT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.theloai" Member="theloais">
+    <Type Name="theloai">
+      <Column Name="matheloai" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tentheloai" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="theloai_sach" Member="saches" ThisKey="matheloai" OtherKey="matheloai" Type="sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nxb" Member="nxbs">
+    <Type Name="nxb">
+      <Column Name="manxb" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tennxb" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="nxb_sach" Member="saches" ThisKey="manxb" OtherKey="manxb" Type="sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tacgia" Member="tacgias">
+    <Type Name="tacgia">
+      <Column Name="matacgia" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tentacgia" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tacgia_sach" Member="saches" ThisKey="matacgia" OtherKey="matacgia" Type="sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.docgia" Member="docgias">
+    <Type Name="docgia">
+      <Column Name="madocgia" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ID_Uers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ACCOUNTT_docgia" Member="ACCOUNTT" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="ACCOUNTT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sach" Member="saches">
+    <Type Name="sach">
+      <Column Name="masach" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tensach" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="namxb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="manxb" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="matheloai" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="matacgia" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="khusach" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="giatien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Uers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="picture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ACCOUNTT_sach" Member="ACCOUNTT" ThisKey="ID_Uers" OtherKey="ID_Uers" Type="ACCOUNTT" IsForeignKey="true" />
+      <Association Name="nxb_sach" Member="nxb" ThisKey="manxb" OtherKey="manxb" Type="nxb" IsForeignKey="true" />
+      <Association Name="tacgia_sach" Member="tacgia" ThisKey="matacgia" OtherKey="matacgia" Type="tacgia" IsForeignKey="true" />
+      <Association Name="theloai_sach" Member="theloai" ThisKey="matheloai" OtherKey="matheloai" Type="theloai" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

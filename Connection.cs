@@ -9,7 +9,7 @@ namespace PBL3_1._0_
 {
      class Connection
     {
-        private static string stringConnection = @"Data Source=DESKTOP-55IHQEI\SQLEXPRESS;Initial Catalog=LogIn;Integrated Security=True";
+        private static string stringConnection = @"Data Source=LAPTOP-873V4A2C\SQLEXPRESS;Initial Catalog=LogIn;Integrated Security=True";
 
         public static SqlConnection GetSqlConnection()
         {

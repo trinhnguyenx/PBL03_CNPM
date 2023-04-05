@@ -34,9 +34,14 @@ namespace PBL3_1._0_
                 string tentaikhoan = txtTK.Text;
                 string matkhau = txtMK.Text;
 
-
-
-            if (tentaikhoan.Trim() == "")
+            if (tentaikhoan == "Admin" && matkhau == "123")
+            {
+                Main form = new Main(); //form Admin
+                form.Show();
+                this.Hide();
+                MessageBox.Show("Đăng nhập thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tentaikhoan.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản!");
                 return;
@@ -52,8 +57,8 @@ namespace PBL3_1._0_
                 if (modify.TaiKhoans(query).Count != 0)
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Main main = new Main();
-                    main.Show();
+                    DocGia form = new DocGia();
+                    form.Show();
                     this.Hide();
                 }
                 else
@@ -91,6 +96,16 @@ namespace PBL3_1._0_
             ForgetPassword forgetpassword = new ForgetPassword();
             forgetpassword.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

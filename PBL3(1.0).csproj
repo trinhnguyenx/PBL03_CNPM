@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocGia.Designer.cs">
+      <DependentUpon>DocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNS.dbml</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Modify.cs" />
@@ -75,6 +87,21 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TTDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTDocGia.Designer.cs">
+      <DependentUpon>TTDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTSach.Designer.cs">
+      <DependentUpon>TTSach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DocGia.resx">
+      <DependentUpon>DocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +124,12 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TTDocGia.resx">
+      <DependentUpon>TTDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTSach.resx">
+      <DependentUpon>TTSach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,7 +144,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLNS.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLNS.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNS.dbml.layout">
+      <DependentUpon>QLNS.dbml</DependentUpon>
+    </None>
     <None Include="Resources\316243038_5401226130004934_809196118184628565_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-nen-lau-dai-hogwarts_083824270.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\671822c2f63dd5f65d8fd15c9710420b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkit_old-scroll-png_1079801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\671822c2f63dd5f65d8fd15c9710420b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\671822c2f63dd5f65d8fd15c9710420b2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
